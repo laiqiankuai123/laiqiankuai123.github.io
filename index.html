@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards & Money Transfer Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: #2c3e50;
+            font-size: 2rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #3498db;
+            margin: 10px auto;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-name {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            font-weight: bold;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+        
+        .whatsapp-icon {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .contact-info {
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gift Cards & Money Transfer Services</h1>
+            <p class="subtitle">Premium digital products and fast money transfers worldwide</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h2 class="section-title">Gift Cards</h2>
+        <div class="products-grid">
+            <!-- Apple -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/apple.com" alt="Apple Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Apple Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Apple Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Steam -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/steampowered.com" alt="Steam Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Steam Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Steam Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Razer Gold -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/razer.com" alt="Razer Gold Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Razer Gold Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Razer Gold Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Google -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/google.com" alt="Google Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Google Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Google Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Xbox -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/xbox.com" alt="Xbox Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Xbox Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Xbox Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Amazon -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/amazon.com" alt="Amazon Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Amazon Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Amazon Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- eBay -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/ebay.com" alt="eBay Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">eBay Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('eBay Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Sephora -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/sephora.com" alt="Sephora Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Sephora Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Sephora Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Macy's -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/macys.com" alt="Macy's Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Macy's Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Macy\'s Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Nordstrom -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/nordstrom.com" alt="Nordstrom Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Nordstrom Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Nordstrom Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Foot Locker -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/footlocker.com" alt="Foot Locker Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Foot Locker Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Foot Locker Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Nike -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/nike.com" alt="Nike Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Nike Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Nike Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Lululemon -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/lululemon.com" alt="Lululemon Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Lululemon Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Lululemon Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Target -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/target.com" alt="Target Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Target Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Target Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Walmart -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/walmart.com" alt="Walmart Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Walmart Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Walmart Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- MasterCard -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/mastercard.com" alt="MasterCard Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">MasterCard Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('MasterCard Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- PlayStation -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/playstation.com" alt="PlayStation Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">PlayStation Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('PlayStation Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Neosurf -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/neosurf.com" alt="Neosurf Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Neosurf Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Neosurf Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Adidas -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/adidas.com" alt="Adidas Gift Card">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Adidas Gift Card</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Adidas Gift Card')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Order Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Money Transfer Services</h2>
+        <div class="products-grid">
+            <!-- Zelle -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/zellepay.com" alt="Zelle Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Zelle Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Zelle Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Venmo -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/venmo.com" alt="Venmo Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Venmo Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Venmo Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- PayPal -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/paypal.com" alt="PayPal Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">PayPal Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('PayPal Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Cash App -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/cash.app" alt="Cash App Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cash App Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Cash App Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Chime -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/chime.com" alt="Chime Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Chime Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Chime Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Apple Pay -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/apple.com" alt="Apple Pay Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Apple Pay Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Apple Pay Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- E Transfer -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/interac.ca" alt="E Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">E Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('E Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Revolut -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/revolut.com" alt="Revolut Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Revolut Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Revolut Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- UK Transfer -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/ukbanking.com" alt="UK Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">UK Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('UK Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- AUD Transfer -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/australia.gov.au" alt="AUD Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">AUD Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('AUD Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Hong Kong Transfer -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/hkma.gov.hk" alt="Hong Kong Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Hong Kong Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Hong Kong Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Malaysia Transfer -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://logo.clearbit.com/bnm.gov.my" alt="Malaysia Transfer">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Malaysia Transfer</h3>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Malaysia Transfer')">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i> Contact Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <h3>Contact Us</h3>
+            <p>For inquiries and orders, please reach out via WhatsApp</p>
+            <div class="contact-info">
+                <a href="https://wa.me/8618771265433" class="whatsapp-btn" style="display: inline-flex; width: auto; padding: 10px 20px;">
+                    <i class="fab fa-whatsapp whatsapp-icon"></i> +86 18771265433
+                </a>
+            </div>
+            <p style="margin-top: 1rem;">© 2023 Gift Cards & Money Transfer Services. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function openWhatsApp(product) {
+            const message = `Hi, I'm interested in purchasing ${product}. Can you provide more details?`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/8618771265433?text=${encodedMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>
